@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Nicolás Gonzalo Cordero Varas - ICCI - RUT: 20.543.155-1
 
-#contadores
+# contadores
 
 contador_total_naranja = 0
 contador_anual_naranja = 0
@@ -21,7 +21,7 @@ contador_mensual_kiwi = 0
 añoAnterior = -1
 mesAnterior = -1
 
-#frutas_posibles
+# frutas_posibles
 
 frutas_posibles = ["naranja", "manzana", "pera", "kiwi"]
 
@@ -80,8 +80,6 @@ while datos != "":
             contador_anual_kiwi,
         )
 
-
-
         contador_anual_naranja = 0
         contador_anual_manzana = 0
         contador_anual_pera = 0
@@ -106,7 +104,6 @@ while datos != "":
             "k=",
             contador_mensual_kiwi,
         )
-        
 
         contador_mensual_naranja = 0
         contador_mensual_manzana = 0
@@ -122,4 +119,3 @@ print("Fin del programa")
 
 
 print(contador_total_manzana)
-
