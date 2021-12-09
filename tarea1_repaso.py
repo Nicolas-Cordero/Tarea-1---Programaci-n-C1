@@ -3,7 +3,7 @@
 
 # contadores
 
-contadorTotalGlobal = 0 
+contadorTotalGlobal = 0
 
 contadorTotalNaranja = 0
 contadorAnualNaranja = 0
@@ -30,11 +30,11 @@ frutas_posibles = ["naranja", "manzana", "pera", "kiwi"]
 
 datosIngresados = input("Ingrese datos: ")
 
-#Ciclo While
+# Ciclo While
 
 while datosIngresados != "":
 
-    #Le hacemos split al input
+    # Le hacemos split al input
 
     partes = datosIngresados.split()
     añoIngresado = int(partes[0])
@@ -42,33 +42,56 @@ while datosIngresados != "":
     diaIngresado = int(partes[2])
     frutaIngresada = partes[3].lower()
     cantidadIngresada = int(partes[4])
-   
+
     contadorTotalGlobal += cantidadIngresada
 
-    #Cambio de mes
+    # Cambio de mes
 
-    if (mesIngresado != mesAnterior or añoIngresado != añoAnterior) and mesAnterior != -1:
-    
-        print(">Total Mes",str(mesAnterior)+str("/")+str(añoAnterior),"n=",contadorMensualNaranja,"m=",contadorMensualManzana,"p=",contadorMensualPera,"k=",contadorMensualKiwi)
+    if (
+        mesIngresado != mesAnterior or añoIngresado != añoAnterior
+    ) and mesAnterior != -1:
 
-        contadorMensualNaranja = 0 
-        contadorMensualManzana = 0 
-        contadorMensualPera = 0 
-        contadorMensualKiwi = 0 
+        print(
+            ">Total Mes",
+            str(mesAnterior) + str("/") + str(añoAnterior),
+            "n=",
+            contadorMensualNaranja,
+            "m=",
+            contadorMensualManzana,
+            "p=",
+            contadorMensualPera,
+            "k=",
+            contadorMensualKiwi,
+        )
 
-    #Cambio de año
+        contadorMensualNaranja = 0
+        contadorMensualManzana = 0
+        contadorMensualPera = 0
+        contadorMensualKiwi = 0
+
+    # Cambio de año
 
     if añoIngresado != añoAnterior and añoAnterior != -1:
 
-        print(">Año",añoAnterior,"n=",contadorAnualNaranja,"m=",contadorAnualManzana,"p=",contadorAnualPera,"k=",contadorAnualKiwi)
+        print(
+            ">Año",
+            añoAnterior,
+            "n=",
+            contadorAnualNaranja,
+            "m=",
+            contadorAnualManzana,
+            "p=",
+            contadorAnualPera,
+            "k=",
+            contadorAnualKiwi,
+        )
 
-        contadorAnualNaranja = 0 
-        contadorAnualManzana = 0 
-        contadorAnualPera = 0 
-        contadorAnualKiwi = 0 
+        contadorAnualNaranja = 0
+        contadorAnualManzana = 0
+        contadorAnualPera = 0
+        contadorAnualKiwi = 0
 
-
-    #Modificamos contadores dependiendo del tipo de fruta   
+    # Modificamos contadores dependiendo del tipo de fruta
 
     if frutaIngresada == str(frutas_posibles[0]):
         contadorTotalNaranja += cantidadIngresada
@@ -89,23 +112,53 @@ while datosIngresados != "":
         contadorMensualKiwi += cantidadIngresada
 
     mesAnterior = mesIngresado
-    añoAnterior = añoIngresado 
-    
+    añoAnterior = añoIngresado
 
     datosIngresados = input("Ingrese datos: ")
 
-#Porcentajes por fruta
+# Porcentajes por fruta
 
-porcentajeNaranjas = ((contadorTotalNaranja/contadorTotalGlobal)*100)
-porcentajeManzanas = ((contadorTotalManzana/contadorTotalGlobal)*100)
-porcentajePeras = ((contadorTotalPera/contadorTotalGlobal)*100)
-porcentajeKiwis = ((contadorTotalKiwi/contadorTotalGlobal)*100)
+porcentajeNaranjas = (contadorTotalNaranja / contadorTotalGlobal) * 100
+porcentajeManzanas = (contadorTotalManzana / contadorTotalGlobal) * 100
+porcentajePeras = (contadorTotalPera / contadorTotalGlobal) * 100
+porcentajeKiwis = (contadorTotalKiwi / contadorTotalGlobal) * 100
 
 print("Programa finalizado")
 print("")
-print(">Total Vendido:",contadorTotalGlobal,"unidades de fruta")
-print(">Total Naranjas:",contadorTotalNaranja,"unidades","/",round(porcentajeNaranjas,2),"%","del total vendido")
-print(">Total Manzanas:",contadorTotalManzana,"unidades","/",round(porcentajeManzanas,2),"%","del total vendido")
-print(">Total Peras:",contadorTotalPera,"unidades","/",round(porcentajePeras,2),"%","del total vendido")
-print(">Total Kiwis:",contadorTotalKiwi,"unidades","/",round(porcentajeKiwis,2),"%","del total vendido")
-
+print(">Total Vendido:", contadorTotalGlobal, "unidades de fruta")
+print(
+    ">Total Naranjas:",
+    contadorTotalNaranja,
+    "unidades",
+    "/",
+    round(porcentajeNaranjas, 2),
+    "%",
+    "del total vendido",
+)
+print(
+    ">Total Manzanas:",
+    contadorTotalManzana,
+    "unidades",
+    "/",
+    round(porcentajeManzanas, 2),
+    "%",
+    "del total vendido",
+)
+print(
+    ">Total Peras:",
+    contadorTotalPera,
+    "unidades",
+    "/",
+    round(porcentajePeras, 2),
+    "%",
+    "del total vendido",
+)
+print(
+    ">Total Kiwis:",
+    contadorTotalKiwi,
+    "unidades",
+    "/",
+    round(porcentajeKiwis, 2),
+    "%",
+    "del total vendido",
+)
