@@ -123,4 +123,3 @@ print("Fin del programa")
 
 print(contador_total_manzana)
 
-print("xd")
